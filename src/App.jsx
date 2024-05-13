@@ -55,7 +55,7 @@ function App() {
     <>
       <div className='container-fluid' style={styles}>
         <div id='quote-box' className='container'>
-          <h2 id='text'>"{randomQuotes.quote}"</h2>
+          <h2 id='text'>🙶{randomQuotes.quote}"</h2>
           <p id='author'>-{randomQuotes.author}</p>
           <button id='new-quote' className="btn-block" onClick={addCount}>New Quote</button>
           <div id='footer'>
@@ -63,6 +63,7 @@ function App() {
               <a id='tweet-quote' href="https://twitter.com/intent/tweet" alt="Tweet this code" target="_blank"><i className='fa fa-twitter'></i></a>
             </button>
           </div>
+        <p className='text-center doneBy'>by Abdulmelik <img src="./src/assets/Abdulmelik-Logo.jpg" width={50} /></p>
         </div>
       </div>
     </>
