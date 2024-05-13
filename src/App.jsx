@@ -55,7 +55,7 @@ function App() {
     <>
       <div className='container-fluid' style={styles}>
         <div id='quote-box' className='container'>
-          <h2 id='text'>🙶{randomQuotes.quote}"</h2>
+          <h2 id='text'>🙶{randomQuotes.quote}</h2>
           <p id='author'>-{randomQuotes.author}</p>
           <button id='new-quote' className="btn-block" onClick={addCount}>New Quote</button>
           <div id='footer'>
