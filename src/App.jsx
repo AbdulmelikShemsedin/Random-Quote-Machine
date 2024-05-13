@@ -11,6 +11,14 @@ function App() {
     setCount(c => c + 1);
   }
   
+  let styles = {
+    backgroundColor: '#fff1a1',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '100vh'
+  }
+
   useEffect(() => {
     const fetchData = async() => {
       try{
@@ -34,18 +42,27 @@ function App() {
     }
 
     fetchData();
+    
+    let randomColor = '#c' + Math.ceil(Math.random() * 99999);
+    let colorStr = randomColor.toString()
+    
+    $(".container-fluid").css('background-color', colorStr);
+    $(".container-fluid").css('color', colorStr);
+
   }, [count])
 
   return (
     <>
-      <div id='quote-box' className='container'>
-        <h2 id='text'>{randomQuotes.quote}</h2>
-        <p id='author'>{randomQuotes.author}</p>
-        <button id='new-quote' onClick={addCount}>New Quote</button>
-        <div id='footer'>
-          <button className='btn-primary'>
-            <a id='tweet-quote' href="twitter.com/intent/tweet"><i className='fa fa-twitter'></i></a>
-          </button>
+      <div className='container-fluid' style={styles}>
+        <div id='quote-box' className='container'>
+          <h2 id='text'>"{randomQuotes.quote}"</h2>
+          <p id='author'>-{randomQuotes.author}</p>
+          <button id='new-quote' className="btn-block" onClick={addCount}>New Quote</button>
+          <div id='footer'>
+            <button className='btn-primary btn-block'>
+              <a id='tweet-quote' href="https://twitter.com/intent/tweet" alt="Tweet this code" target="_blank"><i className='fa fa-twitter'></i></a>
+            </button>
+          </div>
         </div>
       </div>
     </>

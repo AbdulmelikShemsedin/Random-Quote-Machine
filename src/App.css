@@ -3,6 +3,26 @@
 }
 
 #quote-box {
-  width: auto;
+  width: 550px;
+  padding: 20px 30px;
+  background-color: #ffd;
+  border: 1.5px solid #0a0a23;
+  border-radius: 15px;
+  box-shadow: 11px 11px 7px #ffd;
   margin: auto;
+}
+
+#author {
+  margin-left: 60%;
+}
+
+#quote-box button {
+  margin: 5px 0;
+  border-radius: 10px;
+}
+
+@media (max-width: 550px) {
+  #quote-box {
+    scale: 0.75;
+  }
 }
